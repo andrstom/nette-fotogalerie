@@ -1,0 +1,57 @@
+{block content}
+<div class="section-colored text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <br><br>
+                <h2><strong>Nastavení</strong></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h2><strong>Vložit obrázky</strong></h2>
+                {control uploadForm}
+                <p>Název obrázku pozadí -> intro-bg<p>
+                <p>Název obrázku profilu -> profil<p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h2><strong>Smazat obrázky</strong></h2>
+                {foreach $categories as $k => $v}
+                <div id="portfolio">
+                    <h3>{$k}</h3>
+                    <div class="portfolio-items">
+                        {foreach $v as $image}
+                            <div class="portfolio-image">
+                                <div class="hover-bg">
+                                    <a onclick="return confirm('Opravdu to chceš smazat, čidlíčku???');" n:href="Settings:delete $image" >
+                                    <div class="hover-text">
+                                        <div class="overlay-caption">
+                                            <div class="overlay-content">
+                                                <h4>Smazat</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="{$basePath}/img/{$k}/thumb/{$image}" width="100" alt="{$image}"></a>
+                                </div>
+                            </div>
+                        {/foreach}
+                     </div>
+                </div>
+                <hr>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

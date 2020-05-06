@@ -1,0 +1,204 @@
+{block content}
+<!-- Header -->
+<header id="header">
+    <div class="intro">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="intro-text">
+                            <strong><h2>Jana Řeháčková.cz</h2></strong>
+                            <p>Fotografie mě prostě baví.</p>
+                            <a href="#contact" class="btn btn-custom btn-lg page-scroll">více / more</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Portfolio</h2>
+            <hr>
+        </div>
+        <div class="categories">
+            <ul class="cat">
+                <li>
+                    <ol class="type">
+                        <li><a href="#" data-filter="*" class="active">Vše</a></li>
+                        <li><a href="#" data-filter=".portrait">Portréty</a></li>
+                        <li><a href="#" data-filter=".nature">Příroda</a></li>
+                        <li><a href="#" data-filter=".people">Lidé</a></li>
+                        <li><a href="#" data-filter=".wedding">Svatba</a></li>
+                        <li><a href="#" data-filter=".trips">Cestování</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="portfolio-items">
+                {foreach $categories as $k => $v}
+                    {foreach $v as $image}
+                        <div class="col-sm-5 col-md-3 {$k}">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="{$basePath}/img/{$k}/{$image}" title="{$k}-{$image}" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <div class="overlay-caption">
+                                                <div class="overlay-content">
+                                                    <strong><h4>{$k}</h4></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{$basePath}/img/{$k}/thumb/{$image}" class="img-responsive" alt="{$k}-{$image}"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                {/foreach}
+            </div>
+        </div>
+    </div>
+</div>
+<section class="pricelist" id="pricelist">
+    <div class="container">
+        <div class="row">
+            <div class="section-title text-center">
+                <h2>Ceník</h2>
+                <hr>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-success text-center">
+                    <div class="panel-heading">
+                        <img src="{$basePath}/icon-couple.png" alt="cake" width="150">
+                        <h3>Portréty & páry</h3>
+                        <br>
+                    </div>
+                    <div class="panel-body">
+                        <h3>10 upravených fotografií</h3>
+                        <h3>500 Kč</h3>
+                        <hr>
+
+                        <h3>20 upravených fotografií</h3>
+                        <h3>1000 Kč</h3>
+                        <hr>
+
+                        <p>délka focení (cca 1-2 hodiny)</p>
+                        <p>možné i více fotografií (cena dohodou)</p>
+                        <p>foto na DVD</p>
+                        <p>doba zpracování fotografií do 1-2 týdnů</p>
+                        <p>doprava po Praze zdarma (mimo Prahu 5 Kč/km)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="panel panel-info text-center">
+                    <div class="panel-heading">
+                        <img src="{$basePath}/icon-cake.png" alt="cake" width="150">
+                        <h3>Rodina & děti & oslavy</h3>
+                        <br>
+                    </div>
+                    <div class="panel-body">
+                        <h3>10 upravených fotografií</h3>
+                        <h3>500 Kč</h3>
+                        <hr>
+
+                        <h3>20 upravených fotografií</h3>
+                        <h3>1000 Kč</h3>
+                        <hr>
+
+                        <p>délka focení (cca 1-2 hodiny)</p>
+                        <p>možné i více fotografií (cena dohodou)</p>
+                        <p>foto na DVD</p>
+                        <p>doba zpracování fotografií do 1-2 týdnů</p>
+                        <p>doprava po Praze zdarma (mimo Prahu 5 Kč/km)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="panel panel-danger text-center">
+                    <div class="panel-heading">
+                        <img src="{$basePath}/icon-wedding.png" alt="wedding" width="150">
+                        <h3>Svatba</h3>
+                        <br>
+                    </div>
+                    <div class="panel-body">
+                        <h3>Základní</h3>
+                        <p>obřad</p>
+                        <p>společné fotografie</p>
+                        <p>portrétové focení novomanželů</p>
+                        <p>momentky</p>
+                        <h3>4000 Kč</h3>
+                        <hr>
+
+                        <h3>Rozšířené</h3>
+                        <p>přípravy</p>
+                        <p>obřad</p>
+                        <p>společné fotografie</p>
+                        <p>portrétové focení novomanželů</p>
+                        <p>momentky</p>
+                        <p>hostina</p>
+                        <h3>5000 Kč</h3>
+                        <hr>
+
+                        <p>počet fotografií se odvíjí od velikosti svatby, počtu hostů apod.</p>
+                        <p>foto na DVD</p>
+                        <p>doba zpracování fotografií do 3-5 týdnů</p>
+                        <p>cena za dopravu na místo svatby - 5 Kč/km</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="section-title">
+                <strong><h2>O mě / About Me</h2></strong>
+                <img src="{$basePath}/img/setup/profil.jpg" class="img-responsive" alt="profil">
+                <p>Jmenuji se Jana Řeháčková. Focení bylo vždy mým snem, a proto jsem si ho před několika 
+                   lety splnila a od té doby se věnuji fotografování. Fotografuji <strong>portréty, páry, rodiny, 
+                   oslavy, děti a svatby</strong>. Snažím se splnit přání klienta a především zachytit 
+                   spontánní okamažiky a originální momentky. Působím v <strong>Praze</strong> nebo 
+                   <strong>Hradci Králové</strong>.</p>
+                <p>V případě zájmu mě kontaktujte pomocí formuláře.</p>
+            </div>
+                <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="github" data-lang="cs" data-i18n_like="To se mi líbí" data-ef_voting="grow" data-identifier="janina-foto.cekuj.net" data-dislike_enabled="false" data-icon_dislike_show="false"></span>
+<!-- LikeBtn.com END -->
+        </div>
+        <div class="col-md-5">
+            <div class="section-title">
+            </div>
+            {form commentForm}
+                    <div class="form-group">
+                        {input name} {label name /}
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        {input mail} {label mail /}
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        {input comment} {label comment /}
+                        <p class="help-block text-danger"></p>
+                    </div>
+                <div id="success"></div>
+                {input send}
+            {/form}
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <p>&copy; 2018-2020 janarehackova.cz | All rights reserved.</p>
+    </div>
+</div>
+{/block}

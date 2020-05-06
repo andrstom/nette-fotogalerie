@@ -1,0 +1,21 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	autoStart: true
+	expiration: 1 day
+
+
+security:
+	users:
+		username: password  # user , password
+
+
+services:
+	router: App\Router\RouterFactory::createRouter
